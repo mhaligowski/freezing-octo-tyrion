@@ -2,9 +2,16 @@
 *.pot
 *.pyc
 
+-- temporary directory
+tmp/
+
 -- unix virtualenv dependencies
 .Python
 bin/
 include/
 lib/
+share/
 
+-- IDEs
+tyrion.sublime-workspace
+tyrion.sublime-project
