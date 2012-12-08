@@ -1,4 +1,10 @@
 *.log
 *.pot
 *.pyc
-local_settings.py
+
+-- unix virtualenv dependencies
+.Python
+bin/
+include/
+lib/
+
