@@ -5,9 +5,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'dupa.views.home', name='home'),
-    # url(r'^dupa/', include('dupa.foo.urls')),
+	(r'^accounts/', include('userena.urls'))
 )
 
 if settings.DEBUG: urlpatterns += patterns('', 

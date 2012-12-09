@@ -120,6 +120,12 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'south',
+    'userena',
+    'guardian',
+    'easy_thumbnails',
+
+    # my apps
+    'tyrion.apps.accounts',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -150,3 +156,10 @@ LOGGING = {
         },
     }
 }
+
+ANONYMOUS_USER_ID = -1
+AUTH_PROFILE_MODULE = 'accounts.UserProfile'
+
+LOGIN_REDIRECT_URL = '/home'
+LOGIN_URL = '/accounts/signin/'
+LOGOUT_URL = '/accounts/signout/'
