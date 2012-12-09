@@ -3,6 +3,7 @@
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
@@ -160,6 +161,8 @@ LOGGING = {
 ANONYMOUS_USER_ID = -1
 AUTH_PROFILE_MODULE = 'accounts.UserProfile'
 
-LOGIN_REDIRECT_URL = '/home'
+LOGIN_REDIRECT_URL = '/home/'
 LOGIN_URL = '/accounts/signin/'
 LOGOUT_URL = '/accounts/signout/'
+
+USERENA_SIGNIN_REDIRECT_URL = "/home/"

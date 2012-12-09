@@ -24,7 +24,27 @@ DATABASES = {
 # installed apps
 INSTALLED_APPS = INSTALLED_APPS + (
     'django.contrib.admin',
+    'debug_toolbar',
+)
+
+# middleware
+MIDDLEWARE_CLASSES = MIDDLEWARE_CLASSES + (
+	'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 # Userena configuration
 EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+
+# static files
+STATICFILES_DIRS = (
+	os.path.join(head, 'www'),
+)
+
+# django debug toolbar configuration
+INTERNAL_IPS = ('127.0.0.1', '0.0.0.0', 'localhost', )
+DEBUG_TOOLBAR_CONFIG = {
+    'INTERCEPT_REDIRECTS': False,
+    'HIDE_DJANGO_SQL': False,
+    'TAG': 'body',
+    'ENABLE_STACKTRACES' : True,
+}

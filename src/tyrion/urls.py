@@ -5,7 +5,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-	(r'^accounts/', include('userena.urls'))
+	(r'^accounts/', include('tyrion.apps.accounts.urls'))
 )
 
 if settings.DEBUG: urlpatterns += patterns('', 
