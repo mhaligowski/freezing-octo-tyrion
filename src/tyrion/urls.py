@@ -5,7 +5,8 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('',
-	(r'^accounts/', include('tyrion.apps.accounts.urls'))
+	(r'^accounts/', include('tyrion.apps.accounts.urls')),
+	(r'^home/$', 'tyrion.apps.dashboard.views.index'),
 )
 
 if settings.DEBUG: urlpatterns += patterns('', 

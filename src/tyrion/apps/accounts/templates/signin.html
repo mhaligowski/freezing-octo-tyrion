@@ -5,20 +5,14 @@
     <!-- start: Meta -->
     <meta charset="utf-8">
     <title>HaaS</title>
-    <meta name="author" content="Łukasz Holeczek">
     <!-- end: Meta -->
     
     <!-- start: Mobile Specific -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- end: Mobile Specific -->
 
-    <!-- start: CSS -->
-    <link id="bootstrap-style" href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
-    <link href="{{ STATIC_URL }}css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link id="base-style" href="{{ STATIC_URL }}css/style.css" rel="stylesheet">
-    <link id="base-style-responsive" href="{{ STATIC_URL }}css/style-responsive.css" rel="stylesheet">
-    <!-- end: CSS -->
-
+    {% include "_css.html" %}
+    
     <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -80,33 +74,9 @@
                 
     </div><!--/.fluid-container-->
 
-    <!-- start: JavaScript-->
 
-    <script src="{{ STATIC_URL }}js/jquery-1.7.2.min.js"></script>
-    <script src="{{ STATIC_URL }}js/jquery-ui-1.8.21.custom.min.js"></script>
-    <script src="{{ STATIC_URL }}js/bootstrap.js"></script>
-    <script src="{{ STATIC_URL }}js/jquery.cookie.js"></script>
-    <script src='{{ STATIC_URL }}js/fullcalendar.min.js'></script>
-    <script src='{{ STATIC_URL }}js/jquery.dataTables.min.js'></script>
-    <script src="{{ STATIC_URL }}js/excanvas.js"></script>
-    <script src="{{ STATIC_URL }}js/jquery.flot.min.js"></script>
-    <script src="{{ STATIC_URL }}js/jquery.flot.pie.min.js"></script>
-    <script src="{{ STATIC_URL }}js/jquery.flot.stack.js"></script>
-    <script src="{{ STATIC_URL }}js/jquery.flot.resize.min.js"></script>
-    <script src="{{ STATIC_URL }}js/jquery.chosen.min.js"></script>  
-    <script src="{{ STATIC_URL }}js/jquery.uniform.min.js"></script>
-    <script src="{{ STATIC_URL }}js/jquery.cleditor.min.js"></script>
-    <script src="{{ STATIC_URL }}js/jquery.noty.js"></script>
-    <script src="{{ STATIC_URL }}js/jquery.elfinder.min.js"></script>
-    <script src="{{ STATIC_URL }}js/jquery.raty.min.js"></script>
-    <script src="{{ STATIC_URL }}js/jquery.iphone.toggle.js"></script>
-    <script src="{{ STATIC_URL }}js/jquery.uploadify-3.1.min.js"></script>
-    <script src="{{ STATIC_URL }}js/jquery.gritter.min.js"></script>
-    <script src="{{ STATIC_URL }}js/jquery.imagesloaded.js"></script>
-    <script src="{{ STATIC_URL }}js/jquery.masonry.min.js"></script>
-    <script src="{{ STATIC_URL }}js/custom.js"></script>
+    {% include "_javascript.html" %}
 
-    <!-- end: JavaScript-->
     
 </body>
 </html>

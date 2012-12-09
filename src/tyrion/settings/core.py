@@ -1,3 +1,5 @@
+import os
+import os.path
 # Django settings for dupa project.
 
 DEBUG = True
@@ -7,6 +9,9 @@ TEMPLATE_DEBUG = DEBUG
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
+
+pwd = os.path.split(__file__)[0]
+ROOT_DIR = os.path.split(pwd)[0]
 
 MANAGERS = ADMINS
 
@@ -111,6 +116,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    os.path.join(ROOT_DIR, "templates")
 )
 
 INSTALLED_APPS = (
@@ -127,6 +133,7 @@ INSTALLED_APPS = (
 
     # my apps
     'tyrion.apps.accounts',
+    'tyrion.apps.dashboard',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -161,8 +168,10 @@ LOGGING = {
 ANONYMOUS_USER_ID = -1
 AUTH_PROFILE_MODULE = 'accounts.UserProfile'
 
-LOGIN_REDIRECT_URL = '/home/'
+LOGIN_REDIRECT_URL = '/profile/'
 LOGIN_URL = '/accounts/signin/'
 LOGOUT_URL = '/accounts/signout/'
 
 USERENA_SIGNIN_REDIRECT_URL = "/home/"
+USERENA_WITHOUT_USERNAMES = True
+USERENA_SIGNIN_REDIRECT_IF_AUTHENTICATED = True
