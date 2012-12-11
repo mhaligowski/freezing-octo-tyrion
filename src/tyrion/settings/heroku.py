@@ -33,7 +33,6 @@ EMAIL_USE_TLS = False
 
 # static files
 STATIC_ROOT = os.path.join(head, 'static')
-print STATIC_ROOT
 
 STATICFILES_DIRS = (
 	os.path.join(head, 'www'),
