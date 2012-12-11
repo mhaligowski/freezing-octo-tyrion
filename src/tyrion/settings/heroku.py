@@ -8,7 +8,7 @@ import os.path
 DEBUG = False
 
 # secret key is taken from the env
-SECRET_KEY = osn.environ['DJANGO_SECRET_KEY']
+SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 # create the tmp dir
 (head, tail) = os.path.split(__file__)
