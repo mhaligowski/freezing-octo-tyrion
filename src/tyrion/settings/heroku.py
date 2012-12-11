@@ -6,6 +6,7 @@ import os
 import os.path
 
 DEBUG = False
+ENABLE_ADMIN = True
 
 # secret key is taken from the env
 SECRET_KEY = os.environ['DJANGO_SECRET_KEY']

@@ -6,6 +6,7 @@ import os
 import os.path
 
 DEBUG = True
+ENABLE_ADMIN = True
 
 # secret key
 SECRET_KEY = '!o_p6jcgat)o0!@*vq1xut+7uqk=#cv!rva0+ujga_+b_r@5o4'
