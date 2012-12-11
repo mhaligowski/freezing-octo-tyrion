@@ -7,6 +7,9 @@ import os.path
 
 DEBUG = True
 
+# secret key
+SECRET_KEY = '!o_p6jcgat)o0!@*vq1xut+7uqk=#cv!rva0+ujga_+b_r@5o4'
+
 # create the tmp dir
 (head, tail) = os.path.split(__file__)
 for i in range(3): (head, tail) = os.path.split(head)
