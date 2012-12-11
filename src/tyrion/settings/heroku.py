@@ -32,7 +32,8 @@ EMAIL_HOST_PASSWORD = os.environ['MAILGUN_SMTP_PASSWORD']
 EMAIL_USE_TLS = False
 
 # static files
-STATIC_ROOT = (os.path.join(head, 'static'))
+STATIC_ROOT = os.path.join(head, 'static')
+print STATIC_ROOT
 
 STATICFILES_DIRS = (
 	os.path.join(head, 'www'),
