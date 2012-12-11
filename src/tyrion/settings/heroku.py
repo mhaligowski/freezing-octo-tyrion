@@ -11,15 +11,8 @@ DEBUG = True
 (head, tail) = os.path.split(__file__)
 for i in range(3): (head, tail) = os.path.split(head)
 
-db_path = os.path.join(head, 'tmp')
-if not os.path.exists(db_path): os.makedirs(db_path) 
-
-DATABASES = { 
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3', 
-        'NAME': os.path.join(db_path, 'devel.sqlite3'),                      
-   }
-}
+import dj_database_url
+DATABASES["default"] = dj_database_url.config()
 
 # installed apps
 INSTALLED_APPS = INSTALLED_APPS + (
