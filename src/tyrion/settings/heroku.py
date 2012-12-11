@@ -5,7 +5,7 @@ from tyrion.settings.core import *
 import os
 import os.path
 
-DEBUG = True
+DEBUG = False
 
 # create the tmp dir
 (head, tail) = os.path.split(__file__)
@@ -19,8 +19,13 @@ INSTALLED_APPS = INSTALLED_APPS + (
     'django.contrib.admin',
 )
 
-# Userena configuration
-EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+# email configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_PORT = os.environ['MAILGUN_SMTP_PORT']
+EMAIL_HOST = os.environ['MAILGUN_SMTP_SERVER']
+EMAIL_HOST_USER = os.environ['MAILGUN_SMTP_LOGIN']
+EMAIL_HOST_PASSWORD = os.environ['MAILGUN_SMTP_PASSWORD']
+EMAIL_USE_TLS = False
 
 # static files
 STATICFILES_DIRS = (
