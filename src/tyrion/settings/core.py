@@ -85,7 +85,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'rg62zrm)li_^x6b-p2)#wnkxfgzo70&jrzm^nn5bmm6#4tbsh&'
+SECRET_KEY = ''
 
 AUTHENTICATION_BACKENDS = (
     'userena.backends.UserenaAuthenticationBackend',
