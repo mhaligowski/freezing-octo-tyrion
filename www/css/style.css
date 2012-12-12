@@ -107,6 +107,8 @@ h6 {
 	text-align: center;
 	position: relative;
 	display: block;
+	margin: 20px;
+
 }
 
 .box-small-link {
@@ -1006,11 +1008,11 @@ input[type="file"],
 .login-box input[type="password"] {
 	border: 1px solid #eee !important;
 	color: #aaa;
-	padding: 20px 5px !important;
 	border-left: none !important;
 	-webkit-box-shadow: none;
        -moz-box-shadow: none;
           	box-shadow: none;
+	height: 42px !important;		
 }
 
 .login-box .remember {
