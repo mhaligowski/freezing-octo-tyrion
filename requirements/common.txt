@@ -1,4 +1,4 @@
-https://github.com/django/django/archive/1.5b1.zip
+Django==1.4.3
 South==0.7.6
 django-guardian==1.0.4
 django-userena==1.1.2

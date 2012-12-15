@@ -13,5 +13,5 @@ def signin(request, redirect_field_name=REDIRECT_FIELD_NAME, **kwargs):
 	else:
 		return userena_views.signin(request, redirect_field_name = redirect_field_name, **kwargs)
 
-
-
+def activate(request, **kwargs):
+    pass

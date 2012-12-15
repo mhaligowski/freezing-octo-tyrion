@@ -8,4 +8,5 @@ import views
 urlpatterns = patterns('',
 	url(r'^signin/$', views.signin, { 'template_name': 'signin.html'}),
 	url(r'^signout/$', userena_views.signout, name='userena_signout'),
+    url(r'^activate/(?P<activation_key>\w+)/$', views.activate),
 )
