@@ -5,3 +5,4 @@ django-userena==1.1.2
 easy-thumbnails==1.1
 wsgiref==0.1.2
 PIL==1.1.7
+yawd-elfinder

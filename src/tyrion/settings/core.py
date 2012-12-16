@@ -130,10 +130,13 @@ INSTALLED_APPS = (
     'userena',
     'guardian',
     'easy_thumbnails',
+    'elfinder',
 
     # my apps
     'tyrion.apps.accounts',
     'tyrion.apps.dashboard',
+    'tyrion.apps.storage',
+
 )
 
 # A sample logging configuration. The only tangible logging
@@ -177,3 +180,13 @@ USERENA_WITHOUT_USERNAMES = True
 USERENA_SIGNIN_REDIRECT_IF_AUTHENTICATED = True
 
 ENABLE_ADMIN = False
+
+TEMPLATE_CONTEXT_PROCESSORS = ('django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'django.core.context_processors.request',
+    'django.contrib.messages.context_processors.messages',
+    'tyrion.common.context_processors.site')

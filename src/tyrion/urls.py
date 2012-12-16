@@ -7,7 +7,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
 	(r'^accounts/', include('tyrion.apps.accounts.urls')),
 	(r'^home/$', 'tyrion.apps.dashboard.views.index'),
-    (r'^storage/$', 'tyrion.apps.storage.views.index'),
+    (r'^storage/', include('tyrion.apps.storage.urls')),
 )
 
 if settings.ENABLE_ADMIN: 
@@ -19,3 +19,4 @@ if not settings.DEBUG:
     urlpatterns += patterns('',
         (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
     )
+    

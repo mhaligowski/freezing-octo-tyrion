@@ -1,120 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>	
-	<!-- start: Meta -->
-	<meta charset="utf-8">
-	<title>Optimus Dashboard</title>
-	<!-- end: Meta -->
-	
-	<!-- start: Mobile Specific -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- end: Mobile Specific -->
+{% extends "dashboard_base.html" %}
 
-	{% include "_css.html" %}
+{% block title %}HaaS - Dashboard{% endblock %}
 
-	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]>
-	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+{% block dashboard_content %}			
+<div id="content" class="span9">
 
-	<!-- start: Favicon -->
-	<link rel="shortcut icon" href="{{ STATIC_URL}}img/favicon.ico">
-	<!-- end: Favicon -->
-		
-</head>
-
-<body>
-	{% include "_header.html" %}
-
-	<div class="container-fluid">
-		<div class="row-fluid">
-				
-            {% include "_mainmenu.html" %}
-
-        	<noscript>
-        		<div class="alert alert-block span10">
-        			<h4 class="alert-heading">Warning!</h4>
-        			<p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
-        		</div>
-        	</noscript>
+	<!-- start: Content -->
+	<div class=" sortable row-fluid">
+		<div class="box-small span4">
+			<a data-rel="tooltip" title="50% free" class="box-small-link" href="#">
+				25 GB
+			</a>
+			<div class="box-small-title">Data</div>
+			<span id="visits-count-n"class="notification">50% free</span>
+		</div>
 			
-			<div id="content" class="span9">
-
-    			<!-- start: Content -->
-    			<div class=" sortable row-fluid">
-    				<div class="box-small span4">
-    					<a data-rel="tooltip" title="50% free" class="box-small-link" href="#">
-    						25 GB
-    					</a>
-    					<div class="box-small-title">Data</div>
-    					<span id="visits-count-n"class="notification">50% free</span>
-    				</div>
-    					
-    				<div class="box-small span4">
-    					<a data-rel="tooltip" title="till 3 IV 2013" class="box-small-link" href="#">
-    						1258 $
-    					</a>
-    					<div class="box-small-title">Credit</div>
-    					<span id="members-count-n" class="notification green">till 3 IV 2013</span>
-    				</div>
-    				
-    				<div class="box-small span4">
-    					<a data-rel="tooltip" title="12 jobs run so far." class="box-small-link" href="#">
-    						12
-    					</a>
-    					<div class="box-small-title">Jobs run so far</div>
-    				</div>
-    			</div>
-        			
-    			<hr>
-        			
-    			<div class="row-fluid">
-    				<div class="box span12">
-    					<div class="box-header">
-    						<h2><i class="icon-list-alt"></i><span class="break"></span>Amount of your data</h2>
-    						<div class="box-icon">
-    							<a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
-    							<a href="#" class="btn-close"><i class="icon-remove"></i></a>
-    						</div>
-    					</div>
-    					<div class="box-content">
-    						<div id="realtimechart" style="height:190px;"></div>
-    							<br/>
-    					</div>
-    				</div><!--/span-->
-    				
-    			</div>
-                <!-- end: Content -->
-
-			</div><!--/#content.span10-->
-		</div><!--/fluid-row-->
-				
-		<div class="modal hide fade" id="myModal">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">×</button>
-				<h3>Settings</h3>
-			</div>
-			<div class="modal-body">
-				<p>Here settings can be configured...</p>
-			</div>
-			<div class="modal-footer">
-				<a href="#" class="btn" data-dismiss="modal">Close</a>
-				<a href="#" class="btn btn-primary">Save changes</a>
-			</div>
+		<div class="box-small span4">
+			<a data-rel="tooltip" title="till 3 IV 2013" class="box-small-link" href="#">
+				1258 $
+			</a>
+			<div class="box-small-title">Credit</div>
+			<span id="members-count-n" class="notification green">till 3 IV 2013</span>
 		</div>
 		
-		<div class="clearfix"></div>
-		<hr>
+		<div class="box-small span4">
+			<a data-rel="tooltip" title="12 jobs run so far." class="box-small-link" href="#">
+				12
+			</a>
+			<div class="box-small-title">Jobs run so far</div>
+		</div>
+	</div>
 		
-		<footer>
-			<p class="pull-left">&copy; <a href="" target="_blank">Mateusz Haligowski</a> 2012</p>
-			<p class="pull-right">Powered by: <a href="#">Optimus Dashboard</a></p>
-		</footer>
-				
-	</div><!--/.fluid-container-->
-
-	<!-- start: JavaScript-->
-	{% include "_javascript.html" %}
-	
-</body>
-</html>
+	<hr>
+		
+	<div class="row-fluid">
+		<div class="box span12">
+			<div class="box-header">
+				<h2><i class="icon-list-alt"></i><span class="break"></span>Amount of your data</h2>
+				<div class="box-icon">
+					<a href="#" class="btn-minimize"><i class="icon-chevron-up"></i></a>
+					<a href="#" class="btn-close"><i class="icon-remove"></i></a>
+				</div>
+			</div>
+			<div class="box-content">
+				<div id="realtimechart" style="height:190px;"></div>
+					<br/>
+			</div>
+		</div><!--/span-->
+	</div>
+    <!-- end: Content -->
+</div><!--/#content.span10-->
+{% endblock %}
