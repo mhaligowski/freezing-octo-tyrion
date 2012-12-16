@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- start: Meta -->
+    <meta charset="utf-8">
+    <title>HaaS activation</title>
+    <!-- end: Meta -->
+    
+    <!-- start: Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- end: Mobile Specific -->
+
+    {% include "_css.html" %}
+    
+    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- start: Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- end: Favicon -->
+        
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row-fluid">
+                    
+            <div class="row-fluid">
+                <div class="login-box">
+                    <div class="icons">
+                    </div>
+
+                    <h2>Account activation failed.</h2>
+
+                    <p>Your account could not be activated. This could be because your activation link has aged or has already been used.</p>
+
+                    <p>Move to <a href="{% url tyrion.apps.accounts.views.signin %}">signin page</a> for password recovery. If your activation key has expired, the new one has been just sent to you.</p>
+                </div><!--/span-->
+            </div><!--/row-->
+        </div><!--/fluid-row-->
+    </div><!--/.fluid-container-->
+
+
+    {% include "_javascript.html" %}
+
+    
+</body>
+</html>

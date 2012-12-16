@@ -33,7 +33,7 @@ class Command(BaseCommand):
             # create user
             new_user = UserenaSignup.objects.create_user(username,
                                                          email,
-                                                         hashlib.sha1(str(random.random())).hexdigest(),
+                                                         None,
                                                          active=False,
                                                          send_email=False)
 
