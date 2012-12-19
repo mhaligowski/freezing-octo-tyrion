@@ -38,3 +38,8 @@ STATIC_ROOT = os.path.join(head, 'static')
 STATICFILES_DIRS = (
 	os.path.join(head, 'www'),
 )
+
+# enable memcache on heroku
+from memcacheify import memcacheify
+
+CACHES = memcacheify()
